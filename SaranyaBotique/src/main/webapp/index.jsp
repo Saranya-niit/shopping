@@ -19,28 +19,7 @@ Bootstrap Case</title><meta charset="utf-8">
 
 <body>
 <div class="container">
-<div>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">saranya website</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index.jsp">Home</a></li>
-      <li><a href="about us.jsp">about us </a></li>
-      <li><a href="contact us.jsp">contact us</a></li>
-      <li><a href="view all.jsp">view all</a></li>
-      <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registration</a>
-      <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-        <a class="dropdown-item" href="registration.jsp"> register now</a>
-        
-      </div>
-    </li>
-    </ul>
-  </div>
-</nav>
-  </div>
+<%@include file="/shared/header.jsp" %>
   
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -54,20 +33,20 @@ Bootstrap Case</title><meta charset="utf-8">
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="resources/image/1.jpg" alt="ghg">
-    </div>
-
-    <div class="item">
-      <img src="resources/image/im10.jpg" alt="Chania">
-    </div>
-
-    <div class="item">
-      <img src="resources/image/im11.jpg" alt="Flower">
-    </div>
-
-    <div class="item">
       <img src="resources/image/im17.jpg" alt="Flower">
     </div>
+
+    <div class="item">
+      <img src="resources/image/im20.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="resources/image/im21.jpg" alt="Flower">
+    </div>
+
+    <div class="item">
+      <img src="resources/image/im11.jpg" alt="ghg">
+         </div>
   </div>
 
   <!-- Left and right controls -->

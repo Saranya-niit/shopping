@@ -5,7 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<title>Insert title here</title>
+<title>insert title here
+</title><center> <h1>Registration</h1></center
 </head>
 <body>
  
@@ -21,6 +22,10 @@
     </div>
     <div class="checkbox">
       <label><input type="checkbox"> Remember me</label>
+    </div>
+    <div class="form-group"><br>
+      <label for="phn no">phn no:</label></br>
+      <input type="phn no" class="form-control" id="phn no" placeholder="Enter phn no">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

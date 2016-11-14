@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html lang="en">
 <head>
@@ -19,7 +20,8 @@ Bootstrap Case</title><meta charset="utf-8">
 
 <body>
 <div class="container">
-<%@include file="/shared/header.jsp" %>
+<%@include file="/WEB-INF/views/shared/header.jsp" %>
+
   
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -33,19 +35,24 @@ Bootstrap Case</title><meta charset="utf-8">
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="resources/image/im17.jpg" alt="Flower">
+      <img style="height:300px;"src="<c:url value='/resources/image/im17.jpg'/>" alt="Flower">
     </div>
 
     <div class="item">
-      <img src="resources/image/im20.jpg" alt="Chania">
+          <img style="height:300px;"src="<c:url value='/resources/image/im20.jpg'/>" alt="Flower">
+    
+   
     </div>
 
     <div class="item">
-      <img src="resources/image/im21.jpg" alt="Flower">
+    <img style="height:300px;"src="<c:url value='/resources/image/im21.jpg'/>" alt="Flower">
+    
+      
     </div>
 
     <div class="item">
-      <img src="resources/image/im11.jpg" alt="ghg">
+     <img style="height:300px;"src="<c:url value='/resources/image/im11.jpg'/>" alt="Flower">
+    
          </div>
   </div>
 
@@ -67,6 +74,7 @@ Bootstrap Case</title><meta charset="utf-8">
   <p>A collection of desined dresses.sarees,salvars, shirts ,kid wear.</p>
 </div>
 </div>
+ 
 </body>
 </html>
 

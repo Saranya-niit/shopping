@@ -6,11 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <title>insert title here
-</title><center> <h1>Registration</h1></center
+</title>
 </head>
-<body>
+<body><%@include file="shared/header.jsp" %>
  
-<div class="container">                                               
+<div class="container">   
+ <h1 style="text-align: center;">Registration</h1>                                            
   <form>
     <div class="form-group">
       <label for="email">Email:</label>

@@ -1,6 +1,4 @@
 package com.niit.controller;
-
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -29,8 +27,9 @@ public class HomeController {
 	   return"registration"; 
    }
    @RequestMapping(value="/viewall")
-   public String viewall()
-   {
-	   return "view all";
-   }
+	public String viewall()
+	{
+		return"viewall";
+	}
+
 }

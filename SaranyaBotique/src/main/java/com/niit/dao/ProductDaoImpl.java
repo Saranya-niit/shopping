@@ -7,7 +7,7 @@ public class ProductDaoImpl implements Productdao{
 	
    public  ProductDaoImpl() {
 	prdlist.add(new Product(101,"birthday dress",450,10,"cute dress","im10.jpg"));
-	prdlist.add(new Product(102,"Nylon Mix Color Dress",1450,2,"cute dress","im7.jpg"));
+	prdlist.add(new Product(102,"Nylon Mix Color Dress",1450,2,"cute dress","im12.jpg"));
      }
 public List<Product>getAllProduct()
 {

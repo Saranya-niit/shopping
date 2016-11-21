@@ -33,7 +33,7 @@ Bootstrap Case</title><meta charset="utf-8">
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img style="height:300px;"src="<c:url value='/resources/image/im17.jpg'/>" alt="Flower">
+      <img style="height:300px;"src="<c:url value='/resources/image/im13.jpg'/>" alt="Flower">
     </div>
 
     <div class="item">

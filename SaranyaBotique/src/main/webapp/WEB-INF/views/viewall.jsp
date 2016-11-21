@@ -5,17 +5,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Botique</title>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="<c:url value='/resources/js/AngularProductController.js'  />" ></script>
 </head>
 <body ng-app="myApp">
-<div class="container"   >
+
+<Div class="container"   >
 <%@include file="/WEB-INF/views/shared/header.jsp" %>
+<input type="text" /><button class="default"><span class="glyphicon glyphicon-search"></span></button>
+
+
 <div ng-controller="myCtrl">
 
-<table>
+
+<table >
 <tr ng-repeat="product in data">
 	<td><img src="<c:url value='/resources/image/{{product.name}}' />" alt="no image" width="100" height="100"/></td>
 	<td>{{product.pid}}</td>

@@ -2,14 +2,13 @@
     pageEncoding="ISO-8859-1"%>
      <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+<html>head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <title>insert title here
 </title>
 </head>
-<body style="background-color:#FF00FF ">
+<body style="background-color:#DEB887">
 <%@include file="shared/header.jsp" %>
 
  

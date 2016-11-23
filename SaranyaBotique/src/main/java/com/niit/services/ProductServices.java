@@ -11,4 +11,8 @@ public List<Product>getAllProduct()
 	return productDao.getAllProduct();
 
 }
+public Product getById(int id)
+{
+	return productDao.getById(id);
+}
 }

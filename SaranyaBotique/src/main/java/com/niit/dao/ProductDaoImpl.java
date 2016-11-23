@@ -19,4 +19,13 @@ public List<Product>getAllProduct()
 {
 	return prdlist;
 }
+@Override
+public Product getById(int id)
+{
+	for(Product prd :prdlist)
+		if(prd.getPid()==id)
+			return prd;
+	return null;
 }
+}
+

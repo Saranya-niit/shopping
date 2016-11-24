@@ -21,20 +21,39 @@
 
 <%@include file="/WEB-INF/views/shared/header.jsp" %>
 
-
-<right><input type="text" /><button class="default"><span class="glyphicon glyphicon-search"></span></button></right>
-<br><br><br><br>
 <div ng-controller="myCtrl">
-<table class=table>
-<tr> 
 
-<td ng-repeat="product in data"> 
-<table> <tr>
+<form >
+<div>
+    <form class="navbar-form navbar-right"> <input type="text" class="form-control glyphicon glyphicon-search" placeholder="Search..."> <span class="glyphicon glyphicon-search"></span> </form>
+   
+  </div>
+</form>
+<table class="table">
+	<tr> 
 
-<td><img src="<c:url value='/resources/image/{{product.name}}' />"  height="100" width="100">
-<button type="button" class="btn btn-primary">view</button>
- </td>
-</tr>
+		<td ng-repeat="product in data"> 
+			<table> 
+				<tr>
+					<td>
+						<img src="<c:url value='/resources/image/{{product.name}}' />"  height="100" width="100"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+							{{product.pname}} 
+					</td>
+				</tr>
+				<tr>
+					<td>
+							Rs. {{product.price}} 
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="button" class="btn btn-primary">view</button>
+					 </td>
+				</tr>
  </table>
 </td>
 </tr>

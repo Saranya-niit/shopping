@@ -16,52 +16,44 @@
 <script src="<c:url value='/resources/js/AngularProductController.js'  />" ></script>
 </head>
 <body ng-app="myApp">
-
-<Div class="container"   >
-
+<div class="container">
 <%@include file="/WEB-INF/views/shared/header.jsp" %>
-
 <div ng-controller="myCtrl">
+	<div class="row">
+			<div class="col-sm-6">
+				<input class="form-control" type="text" id ="query" ng-model="query"   />
+			</div>
+			<div class="col-sm-6">
+					<button  class ="btn btn-primary">
+					<span class="glyphicon glyphicon-search"></span>
 
-<form >
-<div>
-    <form class="navbar-form navbar-right"> <input type="text" class="form-control glyphicon glyphicon-search" placeholder="Search..."> <span class="glyphicon glyphicon-search"></span> </form>
-   
-  </div>
-</form>
-<table class="table">
-	<tr> 
+					</button>
 
-		<td ng-repeat="product in data"> 
-			<table> 
-				<tr>
+			</div>
+	</div>
+	<br/><br/><br/>
+	<table class="table">
+		
+				<tr ng-repeat="product in data|filter:query">
 					<td>
 						<img src="<c:url value='/resources/image/{{product.name}}' />"  height="100" width="100"/>
+						
 					</td>
-				</tr>
-				<tr>
 					<td>
 							{{product.pname}} 
 					</td>
-				</tr>
-				<tr>
 					<td>
 							Rs. {{product.price}} 
 					</td>
-				</tr>
-				<tr>
 					<td>
 						<button type="button" class="btn btn-primary">view</button>
 					 </td>
 				</tr>
  </table>
-</td>
-</tr>
-
-</table>
 
 </div>
-</Div>
+</div>
+
 
 
 </body>

@@ -18,8 +18,11 @@
       <li><a href="contactus">contactus</a></li>
       <li><a href="viewall">view all</a></li>
       <li class="nav-item dropdown">
+      
       <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registration</a>
+     
       <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+       
         <a class="dropdown-item" href="registration"> register now</a>
         
       </div>

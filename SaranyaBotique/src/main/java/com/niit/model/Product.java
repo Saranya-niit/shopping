@@ -6,7 +6,7 @@ public class Product {
 	private double price;
 	private int quantity;
 	private String desc;
-	private String name;
+	private String iname;
 	public int getPid() {
 		return pid;
 	}
@@ -37,24 +37,24 @@ public class Product {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-	public String getName() {
-		return name;
+	public String getIname() {
+		return iname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setIname(String iname) {
+		this.iname = iname;
 	}public Product()
 	{
 		
 	}
 	
 	public Product(int pid,String pname,double price,int quantity,
-			String desc,String name)
+			String desc,String iname)
 	{
 		this.pid=pid;
 		this.pname=pname;
 		this.price=price;
 		this.quantity=quantity;
 		this.desc=desc;
-		this.name=name;
+		this.iname=iname;
 	}
 }

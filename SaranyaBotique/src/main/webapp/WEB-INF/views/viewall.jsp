@@ -33,10 +33,15 @@
 	</div>
 	<br/><br/><br/>
 	<table class="table">
+	<tr>
+			<th></th>
+			<th ng-click="sort('pname')" >Product Name</th>
+			<th>Price</th>
+	</tr>
 		
-				<tr ng-repeat="product in data|filter:query">
+	<tr ng-repeat="product in data|filter:query|orderBy:sortKey:reverse">
 					<td>
-						<img src="<c:url value='/resources/image/{{product.name}}' />"  height="100" width="100"/>
+						<img src="<c:url value='/resources/image/{{product.iname}}' />"  height="100" width="100"/>
 						
 					</td>
 					<td>
@@ -46,7 +51,7 @@
 							Rs. {{product.price}} 
 					</td>
 					<td>
-						<button type="button" class="btn btn-primary">view</button>
+						<a href ="disp?id={{product.pid}}" class="btn btn-primary">view</a>
 					 </td>
 				</tr>
  </table>

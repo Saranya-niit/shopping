@@ -6,4 +6,8 @@ app.controller('myCtrl',function($scope,$http){
 		$scope.data=response.data;
 	});
 	
+	$scope.sort=function(keyname){
+		$scope.sortKey=keyname;
+		
+	}
 });

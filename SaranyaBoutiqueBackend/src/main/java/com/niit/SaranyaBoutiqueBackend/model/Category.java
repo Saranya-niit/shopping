@@ -1,5 +1,7 @@
 package com.niit.SaranyaBoutiqueBackend.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Category")
-public class Category {
+@Table(name="Category",schema="SA")
+public class Category implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int cid;
@@ -47,13 +49,6 @@ public class Category {
 	}
 	public void setCid(int cid) {
 		this.cid = cid;
-	}
-	public void getAdd(){
-		return add;
-	}
-	public void setAdd(int add){
-		this.add=add;
-	}
 	}
 
 }

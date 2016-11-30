@@ -8,17 +8,16 @@
   <name>SaranyaBotique Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  <dependency>
+  <groupId>com.niit</groupId>
+  <artifactId>SaranyaBoutiqueBackend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-    	 <groupId>com.niit</groupId>
-  <artifactId>SaranyaBoutiqueBackend</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-    	
     </dependency>
     <!-- servlet-api -->
 <dependency>

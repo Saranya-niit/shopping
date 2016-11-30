@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.niit.model.Product;
-import com.niit.services.ProductServices;
+import com.niit.SaranyaBoutiqueBackend.model.Product;
+import com.niit.SaranyaBoutiqueBackend.services.ProductServices;
+
+
 @Controller
 public class ProductController {
 	ProductServices productservices=new ProductServices();

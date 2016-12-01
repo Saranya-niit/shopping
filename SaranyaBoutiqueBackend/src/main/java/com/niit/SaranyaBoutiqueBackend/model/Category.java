@@ -10,12 +10,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Category",schema="SA")
+@Table(name="Category")
 public class Category implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int cid;
-	@Column(name="Name")
+	@Column(name="Name") 
 	private String cname;
 	@Column(name="description")
 	private String cdesc;

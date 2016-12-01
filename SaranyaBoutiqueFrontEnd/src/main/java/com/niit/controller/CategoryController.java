@@ -25,9 +25,10 @@ public class CategoryController {
 	}
 	
 	@RequestMapping(value="/admin/addCategory", method=RequestMethod.POST)
-	public String addCategory(@ModelAttribute(name="category") Category c,Model m){
+	public ModelAndView addCategory(@ModelAttribute(name="category") Category c){
 			categoryServices.addCategory(c);
-		return "addCategory";
+			
+		return new ModelAndView("/admin/addCategory","successMsg","Category Added Sucessfully");
 	
 	}
 	

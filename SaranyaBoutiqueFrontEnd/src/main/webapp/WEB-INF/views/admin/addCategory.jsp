@@ -8,6 +8,8 @@
 <title>Add Category</title>
 </head>
 <body>
+<%@include file="/WEB-INF/views/shared/header.jsp" %>
+
 <div>
 <span style="color: green; font-size: 24px; "> ${successMsg} </span>
 <spring:form class="form" action="/admin/addCategory" modelAttribute="category" >

@@ -14,9 +14,9 @@
     
     <ul class="nav navbar-nav">
       <li class="active"><a href="/SaranyaBotique">Home</a></li>
-      <li><a href="aboutus">aboutus </a></li>
-      <li><a href="contactus">contactus</a></li>
-      <li><a href="viewall">view all</a></li>
+      <li><a href="/SaranyaBotique/aboutus">aboutus </a></li>
+      <li><a href="/SaranyaBotique/contactus">contactus</a></li>
+      <li><a href="/SaranyaBotique/viewall">view all</a></li>
       <li><a href="<c:url value='admin/addCategory' />">Add Category</a>
       <li class="nav-item dropdown">
       

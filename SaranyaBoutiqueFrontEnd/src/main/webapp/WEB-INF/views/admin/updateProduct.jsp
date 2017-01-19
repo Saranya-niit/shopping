@@ -23,16 +23,16 @@
 </head>
 <body>
 <div class="container">
-<%@ include file="header.jsp" %>
+<%@ include file="/WEB-INF/views/shared/header.jsp" %>
 <form:form modelAttribute="product" enctype="multipart/form-data" role="form" action="edit" >
 <form:input style="visibility:hidden;" path="pid"/>
 <form:input style="visibility:hidden;" path="image"/>
  <div class="form-group">
- <form:label  path="name">
+ <form:label  path="pname">
 				<spring:message text="Product Name"/>
 </form:label>
-<form:input class="form-control" path="name" />
-<form:errors path="name">
+<form:input class="form-control" path="pname" />
+<form:errors path="pname">
 <p class="errStyle">
 * Product Name should be atleast 3 characters
 </p>
@@ -77,11 +77,11 @@
  
  
  <div class="form-group">
- <form:label  path="description">
+ <form:label  path="desc">
 				<spring:message text="Description"/>
 </form:label>
-  <form:input class="form-control" path="description" />
-  <form:errors path="name">
+  <form:input class="form-control" path="desc" />
+  <form:errors path="desc">
   
   <p class="errStyle">
 * Cannot be blank
@@ -99,7 +99,7 @@
  </p>
  </form:errors>
  Uploaded Image:<form:input disabled="true" path="image"/>
- </div>
+</div>
  <div class="form-group">
  <input  class="btn btn-info"  type="submit"
 					value="<spring:message text="Update Product"/>" />

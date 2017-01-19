@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <title>
-Bootstrap Case</title><meta charset="utf-8">
+Boutique home page</title><meta charset="utf-8">
   
   <style>
   .carousel-inner > .item > img,
@@ -19,7 +19,7 @@ Bootstrap Case</title><meta charset="utf-8">
 <body>
 <div class="container">
 <%@include file="/WEB-INF/views/shared/header.jsp" %>
-
+<br><br><br><br>
   
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -43,13 +43,13 @@ Bootstrap Case</title><meta charset="utf-8">
     </div>
 
     <div class="item">
-    <img style="height:300px;"src="<c:url value='/resources/image/im21.jpg'/>" alt="Flower">
+    <img style="height:300px;"src="<c:url value='/resources/image/im10.jpg'/>" alt="Flower">
     
       
     </div>
 
     <div class="item">
-     <img style="height:300px;"src="<c:url value='/resources/image/im11.jpg'/>" alt="Flower">
+     <img style="height:300px;"src="<c:url value='/resources/image/im17.jpg'/>" alt="Flower">
     
          </div>
   </div>
@@ -68,7 +68,7 @@ Bootstrap Case</title><meta charset="utf-8">
  
 
 <div >
-  <h1>Dreams Botique</h1>
+  <h1>Dreams Boutique</h1>
   <p>A collection of desined dresses.sarees,salvars, shirts ,kid wear.</p>
 </div>
 </div>

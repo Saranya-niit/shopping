@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-<%@ include file="header.jsp" %>
+<%@ include file="/WEB-INF/views/shared/header.jsp" %>
  <h3>Are you sure , you want to delete this product?</h3>
 <div class="row">
 <div class="col-sm-6">

@@ -19,7 +19,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 			<value>.jsp</value>
 		</property>
 	</bean>
-	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+	<mvc:resources mapping="/resources/**" location="/resources/" />
     <mvc:annotation-driven/>
 	
 </beans>

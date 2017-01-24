@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" isELIgnored="false"
     pageEncoding="ISO-8859-1"%>
       <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
@@ -21,18 +20,19 @@
 }
 </style>
 </head>
-<body>
+<body style="background-color: #ffdd99">
 <div class="container">
-<%@ include file="/WEB-INF/views/shared/header.jsp" %>
+<%@ include file="/WEB-INF/views/Template/Header.jsp" %>
+<div style="width: 50%; class="container">
 <form:form modelAttribute="product" enctype="multipart/form-data" role="form" action="edit" >
-<form:input style="visibility:hidden;" path="pid"/>
-<form:input style="visibility:hidden;" path="image"/>
+<form:input style="visibility:hidden;" path="pid" />
+<form:input style="visibility:hidden;" path="image" />
  <div class="form-group">
- <form:label  path="pname">
+ <form:label  path="name">
 				<spring:message text="Product Name"/>
 </form:label>
-<form:input class="form-control" path="pname" />
-<form:errors path="pname">
+<form:input class="form-control" path="name" />
+<form:errors path="name">
 <p class="errStyle">
 * Product Name should be atleast 3 characters
 </p>
@@ -65,9 +65,9 @@
 				<spring:message text="Category"/>
 </form:label>
 <form:select class="form-control" path="category" >
-<form:option value="Kurtha">Kurtha</form:option>
-<form:option value="Lehanga">Lehanga</form:option>
-<form:option value="Gown">Gown</form:option>
+<form:option value="PartyWear">Party Wear</form:option>
+<form:option value="CasualDress">Casual Dress</form:option>
+<form:option value="WeddingDress">Wedding Dress</form:option>
 </form:select>
 
  </div>
@@ -81,7 +81,7 @@
 				<spring:message text="Description"/>
 </form:label>
   <form:input class="form-control" path="desc" />
-  <form:errors path="desc">
+  <form:errors path="name">
   
   <p class="errStyle">
 * Cannot be blank
@@ -99,14 +99,15 @@
  </p>
  </form:errors>
  Uploaded Image:<form:input disabled="true" path="image"/>
-</div>
+ </div>
  <div class="form-group">
  <input  class="btn btn-info"  type="submit"
 					value="<spring:message text="Update Product"/>" />
  </div>
 
 </form:form>
-
+</div>
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
 
 

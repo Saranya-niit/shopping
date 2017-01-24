@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <title>
-Boutique home page</title><meta charset="utf-8">
+Boutique home page                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </title><meta charset="utf-8">
   
   <style>
   .carousel-inner > .item > img,
@@ -16,9 +16,9 @@ Boutique home page</title><meta charset="utf-8">
   </style>
 </head>
 
-<body>
+<body style="background-color: white">
 <div class="container">
-<%@include file="/WEB-INF/views/shared/header.jsp" %>
+<%@include file="/WEB-INF/views/Template/Header.jsp" %>
 <br><br><br><br>
   
 <div id="myCarousel" class="carousel slide" data-ride="carousel">

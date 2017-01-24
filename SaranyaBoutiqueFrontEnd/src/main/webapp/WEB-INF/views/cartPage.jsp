@@ -1,5 +1,5 @@
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" 
-     pageEncoding="ISO-8859-1"%> 
+     pageEncoding="ISO-8859-1" isELIgnored="false" %> 
      <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
          <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %> 
  		<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %> 
@@ -14,17 +14,17 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
    <script src="<c:url value='/resources/js/AngularProductController.js'/>"></script> 
  </head> 
- <body style="background-color: #ffdd99"> 
+ <body style="background-color: white"> 
  
  
  <div class="container"> 
- <%@ include file="/WEB-INF/views/shared/header.jsp"  %> 
+ <%@ include file="/WEB-INF/views/Template/Header.jsp"  %> 
  <div>  
  <center> 
  					<h3>Items in your cart</h3> 
  </center> 
  </div> 
- <div  ng-app="myapp"  ng-controller = "myCtrl" ng-init="retrieveCart()" > 
+ <div  ng-app="myApp"  ng-controller = "myCtrl" ng-init="retrieveCart()" > 
  	  
  	 <div > 
          <table class="table table-bordered table-striped fs13" > 
@@ -44,7 +44,7 @@
  					 	<td class="span1"><img height="60px" width="60px" src="<c:url value="/resources/image/{{items.product.category}}/{{items.product.image}}" /> " alt="image"/></td> 
  						<td>{{items.product.name}}</td> 
  						<td>{{items.product.price}}</td> 
- 						<td>{{items.quantity}}</td> 
+ 						<td>{{items.qunitity}}</td> 
  						<td>{{items.totalPrice}}</td> 
  						<td><a href="#" class="btn btn-danger btnAction" ng-click="removeItemFromCart(items.itemId)"> 
  							<span class="glyphicon glyphicon-remove"></span>remove</a></td> 
@@ -82,7 +82,7 @@
          </div> 
  		</div> 
        </div>  
-       <%@include file="/WEB-INF/views/shared/Footer.jsp" %>   
+       <%@include file="/WEB-INF/views/Template/Footer.jsp" %>   
  </div> 
  </body> 
  </html> 

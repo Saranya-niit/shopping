@@ -1,30 +1,24 @@
 package com.niit.services;
 
-import java.io.Serializable; 
+import java.io.Serializable;
 
- 
-import org.springframework.beans.factory.annotation.Autowired; 
-import org.springframework.stereotype.Service; 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
- 
- import com.niit.dao.CartDao; 
- import com.niit.dao.CartDaoImpl; 
- import com.niit.model.Cart; 
- @Service 
- public class CartService implements Serializable { 
- 
- 
- 	  @Autowired 
-	    private CartDao cartDao; 
+import com.niit.dao.CartDao;
+import com.niit.dao.CartDaoImpl;
+import com.niit.models.Cart;
+@Service
+public class CartService implements Serializable {
 
- 
-	    public Cart getCartById(int cartId) { 
-	        return cartDao.getCartById(cartId); 
-	    } 
+	  @Autowired
+	    private CartDao cartDao;
 
- 
-	    public void update(Cart cart) { 
-	        cartDao.updateCart(cart); 
-	    } 
-} 
+	    public Cart getCartById(int cartId) {
+	        return cartDao.getCartById(cartId);
+	    }
 
+	    public void update(Cart cart) {
+	        cartDao.updateCart(cart);
+	    }
+}

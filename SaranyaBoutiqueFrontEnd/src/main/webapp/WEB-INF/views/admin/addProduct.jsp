@@ -1,8 +1,8 @@
-<%@ page isELIgnored="false" language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,81 +20,92 @@
 }
 </style>
 </head>
-<body>
+<body style="background-color: #ffdd99">
 <div class="container" >
-<%@ include file="/WEB-INF/views/shared/header.jsp" %>
-<br><br><br><br>
+<%@ include file="/WEB-INF/views/Template/Header.jsp" %>
+<div style="width: 50%; class="container">
+ <span style="color:green;font-size:20px;">
+ ${msg}
+ <br/>
+ </span>
 
-
-<form:form role="form" method="post" action="add" modelAttribute="product" enctype="multipart/form-data">
+<form:form role="form"  action="add" modelAttribute="product" enctype="multipart/form-data"> 
  	<div class="form-group">
-				 <form:label  path="pname">
+ 				<form:label  path="name">
 						<spring:message text="Product Name"/>
 				</form:label>
-				<form:input id="pname" class="form-control" path="pname" />
-				<form:errors path="pname" >
+				<form:input style="20%;" class="form-control" path="name" />
+				<form:errors path="name" >
 						<p class="errStyle">
 								* Product Name should be atleast 3 characters
 						</p>
-				 </form:errors>
- 	</div>
- 	<div class="form-group">
- 				<form:label  path="qty">
-						<spring:message text="Quantity Available"/>
-				</form:label>
-				<form:input  class="form-control" path="qty" />
-				<form:errors path="qty" >
-				<p class="errStyle">
-								* should be greater than 1
-				</p>
  				</form:errors>
  	</div>
+
  	<div class="form-group">
- 			<form:label  path="price">
-				<spring:message text="Product Price"/>
-			</form:label>
-			<form:input  class="form-control" path="price" />
-			<form:errors path="price" >
-					<p class="errStyle">
-						* should be greater than 1
+ 					<form:label  path="qty">
+							<spring:message text="Quantity Available"/>
+					</form:label>
+					<form:input class="form-control" path="qty" />
+					<form:errors path="qty" >
+							<p class="errStyle">
+									* should be greater than 1
+						    </p>
+ 				    </form:errors>
+ 	</div>
+
+ 	<div class="form-group">
+ 				<form:label  path="price">
+					<spring:message text="Product Price"/>
+				</form:label>
+				<form:input class="form-control" path="price" />
+				<form:errors path="price" >
+						<p class="errStyle">
+										* should be greater than 1
+						</p>
+ 				</form:errors>
+ 	</div>
+	<div class="form-group">
+ 				<form:label  path="category">
+							<spring:message text="Category"/>
+				</form:label>
+				<form:select class="form-control" path="category" >
+						<form:option value="PartyWear">Party Wear</form:option>
+						<form:option value="CasualDress">Casual Dress</form:option>
+						<form:option value="WeddingDress">Wedding Dress</form:option>
+				</form:select>
+
+ 	</div>
+ 	<div class="form-group">
+ 				<form:label  path="desc">
+					<spring:message text="Description"/>
+				</form:label>
+  				<form:input class="form-control" path="desc" />
+  				<form:errors path="desc">
+  					<p class="errStyle">
+							* Cannot be blank
 					</p>
-			 </form:errors>
-	 </div>
- 	 <div class="form-group">
- 			<form:label  path="category">
-				<spring:message text="Category"/>
-			</form:label>
-			<form:select  class="form-control" path="category" >
-				<form:option value="Party Wear">Party Wear</form:option>
-				<form:option value="Casual Dress">Casual Dress</form:option>
-				<form:option value="Wedding Dress">Wedding Dress</form:option>
-			</form:select>
-    </div>
-   <div class="form-group">
- 	  <form:label  path="desc">
-				<spring:message text="Description"/>
-	 </form:label>
-  	<form:input class="form-control"  path="desc" />
-  	<form:errors path="desc">
-  		<p class="errStyle">
-			* Cannot be blank
-		</p>
- 	</form:errors>
- </div>
+ 				</form:errors>
+ 	</div>
+ 
   <div class="form-group">
- 	<label>Upload Image</label>
-  	<form:input type="file" path="file"  class="form-control" />
-   	<form:errors path="file" >
-  		<p class="errStyle">
- 			* Cannot be blank
- 		</p>
- 	</form:errors>
-  </div>
-  <div class="form-group">
- 	<input  class="btn btn-info"  type="submit"
-					value="<spring:message text="Add Product" />"/>					
+ 				<label>Upload Image</label>
+  				<form:input type="file" path="file"  class="form-control" />
+   					<form:errors path="file" >
+  							<p class="errStyle">
+ 								* Cannot be blank
+ 							</p>
+ 					</form:errors>
+ 	</div>
+ 
+ 	<div class="form-group">
+   			
+ 			<button type="submit" class="btn btn-default">Add Product</button>
+ 							
  	</div>
 </form:form>
+</div>
+<%@include file="/WEB-INF/views/Template/Footer.jsp" %>
 </div>
 </body>
 </html>

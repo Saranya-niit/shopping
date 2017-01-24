@@ -1,50 +1,45 @@
 package com.niit.dao;
+import java.io.Serializable;
+import java.security.Principal;
 
-import java.io.Serializable; 
-import java.security.Principal; 
- 
-  import javax.transaction.Transactional; 
-  import org.hibernate.Query; 
- import org.hibernate.Session; 
- import org.hibernate.SessionFactory; 
- import org.springframework.beans.factory.annotation.Autowired; 
- import org.springframework.stereotype.Repository; 
+import javax.transaction.Transactional;
 
- 
-import com.niit.model.Customer; 
- import com.niit.model.ShippingAddress; 
- import com.niit.model.User; 
- 
- 
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
- 
- @Repository 
-public class ShippingDaoImpl implements ShippingDao,Serializable { 
- 	 
- 	@Autowired 
- 	private SessionFactory sessionFactory; 
- 	 
- 	@Transactional 
- 	@Override 
- 	public void addShippingAddress(ShippingAddress add, Principal p) 
- 	{ 
- 	  Session	session =sessionFactory.openSession();    
- 	  Query query = session.createQuery("from User where userName = ?"); 
-      query.setString(0, p.getName()); 
+import com.niit.models.Customer;
+import com.niit.models.ShippingAddress;
+import com.niit.models.User;
 
- 
-      User u= (User) query.uniqueResult(); 
-      Customer c = u.getCust(); 
-      
-      c.setShippingAddress(add); 
-      add.setUsersDetail(c); 
-      session.save(add); 
-     session.update(c); 
-       session.close(); 
- 
- 
- 	} 
- 
- 
- } 
 
+@Repository
+public class ShippingDaoImpl implements ShippingDao,Serializable {
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	@Transactional
+	@Override
+	public void addShippingAddress(ShippingAddress add, Principal p)
+	{
+	  Session	session =sessionFactory.openSession();
+	
+	  
+	  Query query = session.createQuery("from User where userName = ?");
+      query.setString(0, p.getName());
+
+      User u= (User) query.uniqueResult();
+      Customer c = u.getCust();
+     
+      c.setShippingAddress(add);
+      add.setUsersDetail(c);
+      session.save(add);
+      session.update(c);
+      session.close();
+
+	}
+
+}
